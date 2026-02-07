@@ -1,3 +1,3 @@
 {
-  "installCommand": "pnpm install --filter=crush-tip-be..."
+  "installCommand": "pnpm install"
 }
