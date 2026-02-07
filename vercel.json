@@ -1,18 +1,10 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "",
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm --filter=crush-tip-be run build",
   "outputDirectory": ".",
-  "builds": [
-    {
-      "src": "apps/be/src/serverless.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "apps/be/src/serverless.ts"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
   ]
 }

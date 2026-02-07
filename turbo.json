@@ -23,6 +23,11 @@
     "SUPABASE_URL",
     "SUPABASE_SERVICE_KEY",
     "OPENAI_API_KEY",
-    "PORT"
+    "PORT",
+    "APP_NAME",
+    "APP_PORT",
+    "NODE_ENV",
+    "API_PREFIX",
+    "API_VERSION"
   ]
 }
