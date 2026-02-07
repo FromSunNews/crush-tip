@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": ".",
   "builds": [
     {
       "src": "apps/be/src/serverless.ts",
