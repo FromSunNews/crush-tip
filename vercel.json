@@ -3,7 +3,7 @@
   "framework": null,
   "installCommand": "pnpm install",
   "buildCommand": "pnpm --filter=crush-tip-be run build",
-  "outputDirectory": ".",
+  "outputDirectory": "public",
   "rewrites": [
     { "source": "/(.*)", "destination": "/api" }
   ]
