@@ -1,3 +1,15 @@
 {
-  "installCommand": "pnpm install"
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/be/src/serverless.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/be/src/serverless.ts"
+    }
+  ]
 }
