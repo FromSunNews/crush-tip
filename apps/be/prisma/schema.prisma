@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String       @id @default(uuid())
+  name          String?
+  age           Int?
+  gender        String?
+  personality   String?
+  totalRequests Int          @default(0)
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  suggestions   Suggestion[]
+}
+
+model Suggestion {
+  id             String   @id @default(uuid())
+  userId         String
+  screenshotUrl  String?
+  lastMessage    String?
+  suggestions    Json
+  processingTime Float?
+  selectedIndex  Int?
+  model          String   @default("gpt-4o-mini")
+  createdAt      DateTime @default(now())
+  user           User     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+}

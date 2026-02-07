@@ -4,6 +4,9 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "dev:be": "turbo run dev --filter=crush-tip-be",
+    "dev:mobile": "turbo run dev --filter=crush-tip-mobile",
+    "dev:landing": "turbo run dev --filter=crush-tip-fe-new",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
