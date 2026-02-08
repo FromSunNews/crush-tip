@@ -2,7 +2,7 @@
   "version": 2,
   "framework": null,
   "installCommand": "pnpm install",
-  "buildCommand": "mkdir -p public && pnpm --filter=crush-tip-be run build",
+  "buildCommand": "pnpm --filter=crush-tip-be run build && mkdir -p public && echo '{}' > public/index.json",
   "outputDirectory": "public",
   "rewrites": [
     { "source": "/(.*)", "destination": "/api" }
